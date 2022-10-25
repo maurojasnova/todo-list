@@ -1,0 +1,21 @@
+@import './index.css';
+
+.TodoSearch {
+    font-family: 'Roboto, sans-serif';
+    font-size: 2rem;
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    margin: 32px auto;
+    height: 64px;
+    width: calc(100% - 120px);
+
+    border: 2px solid var(--secondary-blue);
+    border-radius: 10px;
+}
+
+.TodoSearch:focus {
+    outline-color: var(--secondary-blue);
+}

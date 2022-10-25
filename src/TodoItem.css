@@ -1,0 +1,52 @@
+@import './index.css';
+
+.TodoItem {
+
+    background-color: var(--just-white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 24px;
+}
+
+.TodoItem-p {
+
+    font-size: 2rem;
+
+    margin: 0px 12px;
+    padding: 16px;
+    
+    display: flex;
+    align-items: center;
+
+    width: calc(100% - 120px);
+    height: 64px;
+
+    border: 2px solid var(--black);
+    border-radius: 10px;
+}
+
+.TodoItem-p--completed {
+    text-decoration: line-through;
+    color: green;
+
+    border: 2px solid green;
+}
+
+.Icon {
+    width: 24px;
+
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.Icon-check--active {
+    color: green;
+  }
+
+.Icon-delete:hover {
+    color: red;
+  }
+  

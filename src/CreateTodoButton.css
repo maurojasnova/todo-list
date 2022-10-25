@@ -1,0 +1,24 @@
+@import './index.css';
+
+.CreateTodoButton {
+    font-size: 26px;
+
+    background-color: var(--secondary-blue);
+    border: none;
+    border-radius: 30%;
+    color: white;
+
+    cursor: pointer;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 24px auto;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+}
