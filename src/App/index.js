@@ -6,11 +6,11 @@ import { TodoSearch } from "../TodoSearch";
 import { CreateTodoButton } from "../CreateTodoButton";
 import { Modal } from "../Modal";
 import { TodoForm } from "../TodoForm";
-import { useTodos } from './useTodos';
+import { useTodos } from "./useTodos";
 import { TodoHeader } from "../TodoHeader";
-import { TodoList } from '../TodoList';
-import { TodoItem } from '../TodoItem';
-import { TodoEmpty } from '../TodoEmpty';
+import { TodoList } from "../TodoList";
+import { TodoItem } from "../TodoItem";
+import { TodoEmpty } from "../TodoEmpty";
 
 function App() {
   const {
@@ -25,22 +25,24 @@ function App() {
     completedTodos,
     searchValue,
     setSearchValue,
-    addTodo
+    addTodo,
   } = useTodos();
 
   return (
     <React.Fragment>
       <TodoHeader>
-      <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos}/>
-      <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue}/>
+        <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} />
+        <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
       </TodoHeader>
 
-      <TodoList>
-        {error && <TodoError />}
-        {loading && <TodoLoading />}
-        {!loading && !searchedTodos.length && <TodoEmpty />}
-
-        {searchedTodos.map((todo) => (
+      <TodoList
+        error={error}
+        loading={loading}
+        searchedTodos={searchedTodos}
+        onLoading={() => <TodoLoading />}
+        onError={() => <TodoError />}
+        onEmptyTodos={() => <TodoEmpty />}
+        render={(todo) => (
           <TodoItem
             key={todo.text}
             text={todo.text}
@@ -48,12 +50,12 @@ function App() {
             onComplete={() => completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
           />
-        ))}
-      </TodoList>
+        )}
+      />
 
       {!!openModal && (
         <Modal>
-          <TodoForm addTodo={addTodo} setOpenModal={setOpenModal}/>
+          <TodoForm addTodo={addTodo} setOpenModal={setOpenModal} />
         </Modal>
       )}
 
