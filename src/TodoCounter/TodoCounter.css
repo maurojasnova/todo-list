@@ -4,3 +4,7 @@
 
     margin: 24px;
 }
+
+.TodoCounter--loading {
+    opacity: 25%;
+}

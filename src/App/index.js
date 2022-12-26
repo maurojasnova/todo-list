@@ -30,7 +30,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <TodoHeader>
+      <TodoHeader loading={loading}>
         <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} />
         <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
       </TodoHeader>
@@ -44,7 +44,9 @@ function App() {
         onLoading={() => <TodoLoading />}
         onError={() => <TodoError />}
         onEmptyTodos={() => <TodoEmpty />}
-        onEmptySearchResults={(searchText) => <p>No hay resultados para {searchText}</p>}
+        onEmptySearchResults={(searchText) => (
+          <p>No hay resultados para {searchText}</p>
+        )}
         render={(todo) => (
           <TodoItem
             key={todo.text}
