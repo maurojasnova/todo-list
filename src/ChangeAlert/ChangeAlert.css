@@ -1,0 +1,63 @@
+@import "../index.css";
+
+.ChangeAlert-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: #1e1e1f50;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ChangeAlert-container {
+  width: 90%;
+  max-width: 300px;
+  height: auto;
+
+  z-index: 2;
+  background-color: var(--just-white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+
+  border: 2px solid var(--secondary-blue);
+  border-radius: 20px;
+}
+
+.ChangeAlert-p {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Montserrat";
+
+  margin-bottom: 24px;
+}
+
+.ChangeAlert-button--load {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--secondary-blue);
+  border: none;
+  border-radius: 10px;
+  color: white;
+
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Montserrat";
+
+  width: 170px;
+  height: 48px;
+}
