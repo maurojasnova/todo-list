@@ -21,7 +21,7 @@ function TodoForm({ addTodo, setOpenModal }) {
 
   return (
     <form onSubmit={onSubmit}>
-      <label>Escribe tu Todo</label>
+      <label>Write your Todo</label>
       <textarea
         value={newTodoValue}
         onChange={onChange}
@@ -33,10 +33,10 @@ function TodoForm({ addTodo, setOpenModal }) {
           className="TodoForm-button TodoForm-button--cancel"
           onClick={onCancel}
         >
-          Cancelar
+          Cancel
         </button>
         <button type="submit" className="TodoForm-button TodoForm-button--add">
-          Añadir
+          Add
         </button>
       </div>
     </form>
