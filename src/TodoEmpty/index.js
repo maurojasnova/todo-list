@@ -1,8 +1,12 @@
 import React from "react";
+import "./TodoEmpty.css";
 
 function TodoEmpty() {
     return (
-        <p>Create your first todo!</p>
+        <div className="TodoEmpty-container">
+            <p className="TodoEmpty-container-p">Create your first todo!</p>
+        </div>
+        
     )
 }
 

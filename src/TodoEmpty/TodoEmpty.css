@@ -1,0 +1,11 @@
+@import '../index.css';
+
+.TodoEmpty-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Roboto, sans-serif';
+    font-size: 2rem;
+
+}
