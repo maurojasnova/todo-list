@@ -22,7 +22,7 @@
   height: auto;
 
   z-index: 2;
-  background-color: var(--just-white);
+  background-color: var(--soft-orange);
 
   display: flex;
   justify-content: center;
@@ -30,7 +30,7 @@
   flex-direction: column;
   padding: 15px;
 
-  border: 2px solid var(--secondary-blue);
+  border: 2px solid var(--soft-orange);
   border-radius: 20px;
 }
 
